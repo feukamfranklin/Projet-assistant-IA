@@ -1,6 +1,6 @@
 """Agent RAG LangChain (portage .py du notebook LangChain_RAG_Agent_v2.ipynb).
 
-Ce module contient toute la logique de l'agent (vector store, chaine RAG, historique)
+Ce module contient toute la logique de l'agent (vector store, chaîne RAG, historique)
 et est importe tel quel par API_REST.py : l'API ne fait qu'appeler ces fonctions.
 """
 
@@ -49,7 +49,7 @@ _pb_token_exp = None  # epoch seconds d'expiration du token courant, None si inc
 
 
 def _decode_jwt_exp(token):
-    """Extrait le champ 'exp' d'un JWT PocketBase sans verifier la signature."""
+    """Extrait le champ 'exp' d'un JWT PocketBase sans vérifier la signature."""
     try:
         payload_b64 = token.split('.')[1]
         padding = '=' * (-len(payload_b64) % 4)
@@ -60,18 +60,18 @@ def _decode_jwt_exp(token):
 
 
 def _persist_pocketbase_token(token):
-    """Ecrit le token renouvele dans .env pour qu'il survive a un redemarrage."""
+    """Écrit le token renouvelé dans .env pour qu'il survive à un redémarrage."""
     if not token:
         return
     try:
         set_key(ENV_FILE_PATH, "POCKETBASE_TOKEN", token)
         os.environ["POCKETBASE_TOKEN"] = token
     except Exception as exc:
-        print(f"[pocketbase] echec ecriture du token dans .env: {exc}")
+        print(f"[pocketbase] échec écriture du token dans .env: {exc}")
 
 
 def _pocketbase_authenticate():
-    """Recupere un nouveau token via identifiants admin/utilisateur."""
+    """Récupère un nouveau token via identifiants admin/utilisateur."""
     global POCKETBASE_TOKEN, _pb_token_exp
     if not (POCKETBASE_URL and POCKETBASE_ADMIN_EMAIL and POCKETBASE_ADMIN_PASSWORD):
         return False
@@ -84,7 +84,7 @@ def _pocketbase_authenticate():
         response.raise_for_status()
         data = response.json()
     except requests.RequestException as exc:
-        print(f"[pocketbase] echec authentification ({POCKETBASE_AUTH_COLLECTION}): {exc}")
+        print(f"[pocketbase] échec authentification ({POCKETBASE_AUTH_COLLECTION}): {exc}")
         return False
     POCKETBASE_TOKEN = data.get("token")
     _pb_token_exp = _decode_jwt_exp(POCKETBASE_TOKEN)
@@ -108,7 +108,7 @@ def _pocketbase_refresh_token():
             _persist_pocketbase_token(POCKETBASE_TOKEN)
             return True
         except requests.RequestException as exc:
-            print(f"[pocketbase] echec refresh token: {exc}")
+            print(f"[pocketbase] échec refresh token: {exc}")
     return _pocketbase_authenticate()
 
 

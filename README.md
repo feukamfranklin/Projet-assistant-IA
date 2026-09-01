@@ -1,6 +1,6 @@
 # Assistant RAG SISMA : Telegram, FastAPI et PocketBase
 
-Cet assistant conversationnel repond aux questions des eleves et prospects de SISMA depuis Telegram. Il enrichit les reponses avec les documents de la collection PocketBase `Document_rag`, conserve un historique par utilisateur et utilise OpenRouter pour la generation et les embeddings.
+Cet assistant conversationnel répond aux questions des élèves et prospects de SISMA depuis Telegram. Il enrichit les réponses avec les documents de la collection PocketBase `Document_rag`, conserve un historique par utilisateur et utilise OpenRouter pour la génération et les embeddings.
 
 ## Architecture
 
@@ -18,15 +18,15 @@ flowchart LR
 
 Les composants principaux sont les suivants :
 
-- `bot_telegram.py` recoit les messages Telegram et appelle l'API locale.
-- `API_REST.py` expose l'API FastAPI et initialise le retriever au demarrage.
-- `rag_agent.py` telecharge les documents, construit FAISS, gere l'historique et appelle le LLM.
+- `bot_telegram.py` reçoit les messages Telegram et appelle l'API locale.
+- `API_REST.py` expose l'API FastAPI et initialise le retriever au démarrage.
+- `rag_agent.py` télécharge les documents, construit FAISS, gère l'historique et appelle le LLM.
 - `sys_prompt.txt` contient les instructions de comportement de l'assistant. Une fiche `system_prompt` de PocketBase peut le remplacer.
 - `docs/FAQ.txt` fournit un exemple de source documentaire.
 
 ## API REST
 
-L'API est disponible par defaut sur `http://127.0.0.1:8000`.
+L'API est disponible par défaut sur `http://127.0.0.1:8000`.
 
 | Methode    | Route                  | Description                                     |
 | ---------- | ---------------------- | ----------------------------------------------- |
@@ -49,7 +49,7 @@ Content-Type: application/json
 }
 ```
 
-Reponse :
+Réponse :
 
 ```json
 {
@@ -57,7 +57,7 @@ Reponse :
 }
 ```
 
-`message` ne peut pas etre vide. Si le retriever ne peut pas etre initialise, l'API retourne `503`. Les erreurs de traitement de l'agent sont retournees en `500`.
+`message` ne peut pas être vide. Si le retriever ne peut pas être initialisé, l'API retourne `503`. Les erreurs de traitement de l'agent sont retournées en `500`.
 
 ## Bot Telegram
 
@@ -70,17 +70,17 @@ requests.post(
 )
 ```
 
-La cle `answer` retournee par l'API est envoyee en reponse au message Telegram.
+La clé `answer` retournée par l'API est envoyée en réponse au message Telegram.
 
 ## RAG et documents
 
-Les fichiers de la collection PocketBase `Document_rag` sont pris en charge aux formats TXT, Markdown, PDF et DOCX. Ils sont decoupes en morceaux de 1000 caracteres avec un chevauchement de 150 caracteres, puis indexes dans FAISS. Pour chaque question, les 30 passages les plus pertinents sont ajoutes au prompt.
+Les fichiers de la collection PocketBase `Document_rag` sont pris en charge aux formats TXT, Markdown, PDF et DOCX. Ils sont découpés en morceaux de 1000 caractères avec un chevauchement de 150 caractères, puis indexés dans FAISS. Pour chaque question, les 30 passages les plus pertinents sont ajoutés au prompt.
 
-Le vector store reste en memoire. Un manifeste stocke dans l'enregistrement `description_doc_sisma` de `Document_rag` permet de detecter l'ajout, la suppression ou la modification d'un document ; dans ce cas, FAISS est reconstruit et le manifeste est mis a jour.
+Le vector store reste en mémoire. Un manifeste stocké dans l'enregistrement `description_doc_sisma` de `Document_rag` permet de détecter l'ajout, la suppression ou la modification d'un document ; dans ce cas, FAISS est reconstruit et le manifeste est mis à jour.
 
 ## Historique des conversations
 
-PocketBase conserve les donnees dans les collections suivantes :
+PocketBase conserve les données dans les collections suivantes :
 
 | Collection               | Champs utilises                             | Role                                                          |
 | ------------------------ | ------------------------------------------- | ------------------------------------------------------------- |
@@ -88,11 +88,11 @@ PocketBase conserve les donnees dans les collections suivantes :
 | `client_conversations` | `client_id`, `json_file`, `date_time` | Conserve les tours de conversation.                           |
 | `Document_rag`         | `titre`, `file`                         | Stocke les documents, le system prompt et le manifeste FAISS. |
 
-Un client est recherche, puis cree s'il n'existe pas. L'historique est conserve dans `json_file`, limite a 30 tours. Le prompt utilise les 4 derniers tours en detail et resume les echanges plus anciens.
+Un client est recherché, puis créé s'il n'existe pas. L'historique est conservé dans `json_file`, limité à 30 tours. Le prompt utilise les 4 derniers tours en détail et résume les échanges plus anciens.
 
 ## Configuration
 
-Creer un fichier `.env` a la racine du projet :
+Créer un fichier `.env` à la racine du projet :
 
 ```dotenv
 OPENROUTER_API_KEY=...

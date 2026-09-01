@@ -6,8 +6,8 @@ Lancement :uvicorn API_REST:app --host 127.0.0.1 --port 8000 --reload
 Endpoints principaux :
     GET  /operational                    -> etat de l'API
     POST /chat                      -> pose une question a l'agent {"message": str, "num_tel": str}
-    GET  /history/{num_tel}         -> recupere l'historique d'un client
-    DELETE /history/{num_tel}       -> reinitialise l'historique d'un client
+    GET  /history/{num_tel}         -> récupère l'historique d'un client
+    DELETE /history/{num_tel}       -> réinitialise l'historique d'un client
 """
 #%pip install fastapi
 from contextlib import asynccontextmanager
@@ -38,7 +38,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="SISMA Agent API",
-    description="API REST exposant l'agent RAG LangChain (rag_agent.py) a destination de PocketBase.",
+    description="API REST exposant l'agent RAG LangChain (rag_agent.py) à destination de PocketBase.",
     version="1.0.0",
     lifespan=lifespan,
 )
@@ -53,8 +53,8 @@ app.add_middleware(
 
 
 class ChatRequest(BaseModel):
-    message: str | None = Field(default=None, description="Question posee par l'utilisateur")
-    num_tel: str = Field(description="Numero de telephone du client")
+    message: str | None = Field(default=None, description="Question posée par l'utilisateur")
+    num_tel: str = Field(description="Numéro de téléphone du client")
 
 
 class ChatResponse(BaseModel):
@@ -69,7 +69,7 @@ class HistoryTurn(BaseModel):
 
 @app.get("/operational", response_model=dict)
 def operational():
-    """Verifie que l'API et le retriever sont operationnels."""
+    """Vérifie que l'API et le retriever sont opérationnels."""
     return {
         "status": "ok",
         "retriever_ready": rag_agent.retriever is not None,

@@ -1,32 +1,32 @@
 Product FAQ
 
-Voici des exemples de conversations entre de potentiels nouveaux etudiants et la chargee de communication de SISMA.
-Objectif: identifier les questions frequentes et la maniere professionnelle d'y repondre.
+Voici des exemples de conversations entre de potentiels nouveaux étudiants et la chargée de communication de SISMA.
+Objectif: identifier les questions fréquentes et la manière professionnelle d'y répondre.
 
 Dans ces exemples:
-- U = utilisateur (prospect etudiant ou proche)
-- C = chargee de communication SISMA
+- U = utilisateur (prospect étudiant ou proche)
+- C = chargée de communication SISMA
 
-Exemple 1: Filieres accessibles avec Bac A + couts
+Exemple 1: Filières accessibles avec Bac A + coûts
 
-U: Bonjour madame. Je suis titulaire d'un Bac A4 et je souhaite m'inscrire a SISMA pour l'annee 2026-2027. Quelles filieres sont disponibles et quels sont les frais?
-C: Bonjour madame, merci d'avoir contacte SISMA.
-Avec un Bac A, vous avez acces a nos filieres de management, notamment:
-- Comptabilite et Gestion des Entreprises
+U: Bonjour madame. Je suis titulaire d'un Bac A4 et je souhaite m'inscrire à SISMA pour l'année 2026-2027. Quelles filières sont disponibles et quels sont les frais?
+C: Bonjour madame, merci d'avoir contacté SISMA.
+Avec un Bac A, vous avez accès à nos filières de management, notamment:
+- Comptabilité et Gestion des Entreprises
 - Gestion Logistique et Transport
-Les couts de formation sont:
-- Comptabilite et Gestion des Entreprises: 350 000 F
+Les coûts de formation sont:
+- Comptabilité et Gestion des Entreprises: 350 000 F
 - Gestion Logistique et Transport: 400 000 F
 Il n'y a pas de frais d'inscription ni de frais de dossier.
 La pension est payable en tranches.
-Souhaitez-vous que je vous guide directement pour le choix de filiere et le debut de l'inscription?
+Souhaitez-vous que je vous guide directement pour le choix de filière et le début de l'inscription?
 U: D'accord merci. Et pour Gestion Logistique et Transport, on paie comment?
 C: Pour Gestion Logistique et Transport, le total est de 400 000 F, payable en 3 tranches:
 - 1re tranche: 200 000 F
 - 2e tranche: 150 000 F
 - 3e tranche: 50 000 F
-Je precise encore qu'il n'y a pas de frais d'inscription ni de frais de dossier.
-Si vous etes prete, je peux vous indiquer la prochaine etape pour finaliser l'admission.
+Je précise encore qu'il n'y a pas de frais d'inscription ni de frais de dossier.
+Si vous êtes prête, je peux vous indiquer la prochaine étape pour finaliser l'admission.
 
 Exemple 2: Prise de rendez-vous orientation
 
@@ -54,26 +54,26 @@ U: Votre institut et le Meilleur
 C: Merci beaucoup
   Ravie de l’entendre.
 
-Exemple 3: Demande d'explication des filieres (inspire des exemples 1 et 3)
+Exemple 3: Demande d'explication des filières (inspiré des exemples 1 et 3)
 
-U: Bonsoir madame. Apres le Bac A, je ne sais pas encore quelle filiere choisir entre Comptabilite et Logistique. Pouvez-vous m'expliquer rapidement?
+U: Bonsoir madame. Après le Bac A, je ne sais pas encore quelle filière choisir entre Comptabilité et Logistique. Pouvez-vous m'expliquer rapidement?
 C: Bonsoir, avec plaisir.
-Voici un resume simple:
-- Comptabilite et Gestion des Entreprises: adaptee si vous aimez les chiffres, la gestion financiere, l'organisation comptable et l'administration.
-- Gestion Logistique et Transport: adaptee si vous aimez la planification, la chaine d'approvisionnement, le transport et la coordination des operations.
-Cote cout:
-- Comptabilite et Gestion des Entreprises: 350 000 F
+Voici un résumé simple:
+- Comptabilité et Gestion des Entreprises: adaptée si vous aimez les chiffres, la gestion financière, l'organisation comptable et l'administration.
+- Gestion Logistique et Transport: adaptée si vous aimez la planification, la chaîne d'approvisionnement, le transport et la coordination des opérations.
+Côté coût:
+- Comptabilité et Gestion des Entreprises: 350 000 F
 - Gestion Logistique et Transport: 400 000 F
-Je peux vous aider a choisir selon votre projet professionnel. Souhaitez-vous qu'on fasse une orientation rapide ensemble?
+Je peux vous aider à choisir selon votre projet professionnel. Souhaitez-vous qu'on fasse une orientation rapide ensemble?
 
-Exemple 5: Prospect hesitant (inspire des exemples 2 et 3)
+Exemple 5: Prospect hésitant (inspiré des exemples 2 et 3)
 
-U: Merci pour les informations. Je vais reflechir encore un peu.
-C: Merci pour votre retour, c'est une tres bonne demarche.
-Pour vous aider a decider, je peux vous envoyer:
-- un rappel des filieres adaptees a votre Bac
-- les couts et modalites de paiement en tranches
-- les etapes d'inscription simplifiees
-Des que vous etes prete, nous pouvons finaliser votre orientation ou fixer un rendez-vous a SISMA.
-Souhaitez-vous recevoir le recapitulatif complet maintenant?
+U: Merci pour les informations. Je vais réfléchir encore un peu.
+C: Merci pour votre retour, c'est une très bonne démarche.
+Pour vous aider à décider, je peux vous envoyer:
+- un rappel des filières adaptées à votre Bac
+- les coûts et modalités de paiement en tranches
+- les étapes d'inscription simplifiées
+Dès que vous êtes prête, nous pouvons finaliser votre orientation ou fixer un rendez-vous à SISMA.
+Souhaitez-vous recevoir le récapitulatif complet maintenant?
 
