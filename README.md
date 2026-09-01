@@ -28,12 +28,12 @@ Les composants principaux sont les suivants :
 
 L'API est disponible par defaut sur `http://127.0.0.1:8000`.
 
-| Methode | Route | Description |
-| --- | --- | --- |
-| `GET` | `/operational` | Etat de l'API et disponibilite du retriever. |
-| `POST` | `/chat` | Envoie une question a l'agent. |
-| `GET` | `/history/{num_tel}` | Retourne l'historique associe a un utilisateur. |
-| `DELETE` | `/history/{num_tel}` | Efface l'historique sans supprimer le client. |
+| Methode    | Route                  | Description                                     |
+| ---------- | ---------------------- | ----------------------------------------------- |
+| `GET`    | `/operational`       | Etat de l'API et disponibilite du retriever.    |
+| `POST`   | `/chat`              | Envoie une question a l'agent.                  |
+| `GET`    | `/history/{num_tel}` | Retourne l'historique associe a un utilisateur. |
+| `DELETE` | `/history/{num_tel}` | Efface l'historique sans supprimer le client.   |
 
 Exemple d'appel a `/chat` :
 
@@ -82,11 +82,11 @@ Le vector store reste en memoire. Un manifeste stocke dans l'enregistrement `des
 
 PocketBase conserve les donnees dans les collections suivantes :
 
-| Collection | Champs utilises | Role |
-| --- | --- | --- |
-| `clients` | `num_tel` | Identifie un utilisateur. |
-| `client_conversations` | `client_id`, `json_file`, `date_time` | Conserve les tours de conversation. |
-| `Document_rag` | `titre`, `file` | Stocke les documents, le system prompt et le manifeste FAISS. |
+| Collection               | Champs utilises                             | Role                                                          |
+| ------------------------ | ------------------------------------------- | ------------------------------------------------------------- |
+| `clients`              | `num_tel`                                 | Identifie un utilisateur.                                     |
+| `client_conversations` | `client_id`, `json_file`, `date_time` | Conserve les tours de conversation.                           |
+| `Document_rag`         | `titre`, `file`                         | Stocke les documents, le system prompt et le manifeste FAISS. |
 
 Un client est recherche, puis cree s'il n'existe pas. L'historique est conserve dans `json_file`, limite a 30 tours. Le prompt utilise les 4 derniers tours en detail et resume les echanges plus anciens.
 
@@ -140,8 +140,5 @@ python bot_telegram.py
 
 ## Points de vigilance
 
-- Normaliser l'identifiant utilisateur de la meme maniere a chaque appel.
-- Ajouter une contrainte d'unicite sur `clients.num_tel` pour eviter les doublons.
-- Configurer les regles PocketBase pour autoriser uniquement les acces requis par le service.
 - Restreindre le CORS de FastAPI en production : il est actuellement ouvert a toutes les origines.
 - Ne jamais versionner `.env`, les jetons PocketBase ou le jeton Telegram.
