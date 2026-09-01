@@ -45,7 +45,7 @@ Content-Type: application/json
 ```json
 {
   "message": "Quelles sont les formations disponibles ?",
-  "num_tel": "123456789"
+  "num_tel": "675088489"
 }
 ```
 
