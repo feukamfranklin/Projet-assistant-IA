@@ -1,0 +1,50 @@
+# Python dependencies for AI Agent Demo project
+
+# Environment variable management
+python-dotenv>=1.0.0
+
+# HTTP requests for OpenRouter API
+requests>=2.31.0
+
+# OpenAI API client for embeddings and chat completions
+openai>=1.0.0
+
+# Numerical operations and vector calculations
+numpy>=1.24.0
+
+# Token counting and text chunking
+tiktoken>=0.5.0
+
+# PDF document processing
+PyPDF2>=3.0.0
+
+# Word document processing
+python-docx>=1.0.0
+
+# Excel file processing (.xlsx format)
+openpyxl>=3.1.0
+
+# Legacy Excel file processing (.xls format)
+xlrd>=2.0.0
+
+# LangChain framework and OpenRouter integration
+langchain>=0.3.0
+langchain-core>=0.3.0
+langchain-openrouter>=0.1.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+langchain-openai>=0.2.0
+
+# Vector store for LangChain RAG
+faiss-cpu>=1.7.4
+
+# PDF loading for LangChain document loaders
+pypdf>=4.0.0
+
+# interface
+ipywidgets
+
+# API REST pour l'integration PocketBase
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+

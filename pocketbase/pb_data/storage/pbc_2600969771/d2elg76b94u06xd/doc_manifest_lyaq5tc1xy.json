@@ -1,0 +1,32 @@
+[
+  {
+    "id": "8ke4m45qygm622t",
+    "file": [
+      "index_0k40u3ll71.faiss"
+    ],
+    "updated": null
+  },
+  {
+    "id": "d2elg76b94u06xd",
+    "file": [
+      "doc_manifest_09kj77q06t.json"
+    ],
+    "updated": null
+  },
+  {
+    "id": "fifo1t570pw3voo",
+    "file": [
+      "sys_prompt_ipfqopvwyn.txt"
+    ],
+    "updated": null
+  },
+  {
+    "id": "qvmp0x1xais662v",
+    "file": [
+      "faq_sos52vsmv7.txt",
+      "sisma_nrdfcusjih.docx",
+      "sisma_rmeydfx9ll.pdf"
+    ],
+    "updated": null
+  }
+]
